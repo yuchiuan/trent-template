@@ -4,24 +4,26 @@
 
 using namespace std;
 
-int main(int argc, char *argv[]){
+int main(int argc, char *argv[])
+{
 
 	ifstream fp;
-    string tmp;
+	string tmp;
     
 	fp.open(argv[1]);
 
-	if( !fp.is_open() ){
+	if ( !fp.is_open() )
+	{
 	    cerr<<"[Error] file: "<<argv[1]<<" open error!"<<endl;
-        return -1;
+	    return -1;
 	}
-    
-    // Extract formatted input, split by \n or blanks, etc.
-    while ( fp>>tmp ){
-
-        cout<<tmp<<endl;
-    }
-    
-    fp.close();
+	
+	// Extract formatted input, split by \n or blanks, etc.
+    	while ( fp>>tmp )
+    	{
+        	cout<<tmp<<endl;
+    	}
+    	
+    	fp.close();
 	return 0;
 }
